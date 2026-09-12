@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Formulario de contacto moderno desarrollado con HTML y CSS."
+    >
+
+    <title>Formulario de contacto | Taller 2</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Datos del estudiante
+         Nombre: Camilo Bravo
+         Código: 223034102 -->
+
+    <main class="form-page">
+
+        <section class="form-section" aria-labelledby="titulo-formulario">
+
+            <div class="form-container">
+
+                <!-- Encabezado del formulario -->
+
+                <header class="form-header">
+
+                    <span class="eyebrow">
+                        CONTACTO
+                    </span>
+
+                    <h1 id="titulo-formulario">
+                        Cuéntenos sobre su necesidad
+                    </h1>
+
+                    <p>
+                        Complete el formulario. Los campos marcados con
+                        <strong>*</strong> son obligatorios.
+                    </p>
+
+                </header>
+
+
+                <!-- Formulario principal -->
+
+                <form
+                    class="contact-form"
+                    action="#"
+                    method="post"
+                >
+
+                    <!-- Datos personales -->
+
+                    <section
+                        class="form-block"
+                        aria-labelledby="datos-personales"
+                    >
+
+                        <h2 id="datos-personales">
+                            Datos personales
+                        </h2>
+
+                        <div class="form-grid">
+
+                            <div class="form-field">
+
+                                <label for="nombre">
+                                    Nombre
+                                    <span class="required-mark" aria-hidden="true">*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nombre"
+                                    name="nombre"
+                                    autocomplete="given-name"
+                                    placeholder="Laura"
+                                    maxlength="50"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-field">
+
+                                <label for="apellido">
+                                    Apellido
+                                    <span class="required-mark" aria-hidden="true">*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="apellido"
+                                    name="apellido"
+                                    autocomplete="family-name"
+                                    placeholder="Martínez"
+                                    maxlength="50"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-grid">
+
+                            <div class="form-field">
+
+                                <label for="email">
+                                    Correo
+                                    <span class="required-mark" aria-hidden="true">*</span>
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    autocomplete="email"
+                                    placeholder="nombre@empresa.com"
+                                    maxlength="120"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-field">
+
+                                <label for="telefono">
+                                    Teléfono
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="telefono"
+                                    name="telefono"
+                                    autocomplete="tel"
+                                    placeholder="+57 300 000 0000"
+                                    pattern="[+0-9 ()-]{7,20}"
+                                    title="Ingrese un número de teléfono válido utilizando números, espacios, paréntesis, guiones o el signo +."
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- Información de la organización -->
+
+                    <section
+                        class="form-block"
+                        aria-labelledby="organizacion"
+                    >
+
+                        <h2 id="organizacion">
+                            Organización
+                        </h2>
+
+                        <div class="form-grid">
+
+                            <div class="form-field">
+
+                                <label for="empresa">
+                                    Empresa
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="empresa"
+                                    name="empresa"
+                                    autocomplete="organization"
+                                    maxlength="100"
+                                    placeholder="Nombre de la empresa"
+                                >
+
+                            </div>
+
+
+                            <div class="form-field">
+
+                                <label for="empleados">
+                                    Número de empleados
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="empleados"
+                                    name="empleados"
+                                    min="1"
+                                    max="100000"
+                                    step="1"
+                                    placeholder="Ej. 50"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-field">
+
+                            <label for="servicio">
+                                Servicio de interés
+                                <span class="required-mark" aria-hidden="true">*</span>
+                            </label>
+
+                            <select
+                                id="servicio"
+                                name="servicio"
+                                required
+                            >
+
+                                <option
+                                    value=""
+                                    selected
+                                    disabled
+                                >
+                                    Seleccione un servicio
+                                </option>
+
+                                <optgroup label="Auditorías de Seguridad">
+
+                                    <option value="pentesting">
+                                        Pentesting
+                                    </option>
+
+                                    <option value="hacking-etico">
+                                        Hacking Ético
+                                    </option>
+
+                                    <option value="iso27001">
+                                        ISO 27001
+                                    </option>
+
+                                </optgroup>
+
+                                <optgroup label="Desarrollo Seguro">
+
+                                    <option value="ssdlc">
+                                        SSDLC
+                                    </option>
+
+                                    <option value="devsecops">
+                                        DevSecOps
+                                    </option>
+
+                                    <option value="ai-security">
+                                        AI Security
+                                    </option>
+
+                                </optgroup>
+
+                            </select>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- Disponibilidad -->
+
+                    <section
+                        class="form-block"
+                        aria-labelledby="disponibilidad"
+                    >
+
+                        <h2 id="disponibilidad">
+                            Disponibilidad
+                        </h2>
+
+                        <div class="form-grid">
+
+                            <div class="form-field">
+
+                                <label for="fecha">
+                                    Fecha preferida
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="fecha"
+                                    name="fecha"
+                                >
+
+                            </div>
+
+
+                            <div class="form-field">
+
+                                <label for="hora">
+                                    Hora preferida
+                                </label>
+
+                                <input
+                                    type="time"
+                                    id="hora"
+                                    name="hora"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- Forma de contacto -->
+
+                    <fieldset>
+
+                        <legend>
+                            Modalidad de contacto
+                        </legend>
+
+                        <div class="choice-list">
+
+                            <label class="choice">
+
+                                <input
+                                    type="radio"
+                                    name="modalidad"
+                                    value="correo"
+                                    checked
+                                >
+
+                                <span>
+                                    Correo electrónico
+                                </span>
+
+                            </label>
+
+
+                            <label class="choice">
+
+                                <input
+                                    type="radio"
+                                    name="modalidad"
+                                    value="telefono"
+                                >
+
+                                <span>
+                                    Teléfono
+                                </span>
+
+                            </label>
+
+
+                            <label class="choice">
+
+                                <input
+                                    type="radio"
+                                    name="modalidad"
+                                    value="videollamada"
+                                >
+
+                                <span>
+                                    Videollamada
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </fieldset>
+
+
+                    <!-- Temas que le pueden interesar al usuario -->
+
+                    <fieldset>
+
+                        <legend>
+                            Temas adicionales de interés
+                        </legend>
+
+                        <div class="choice-list">
+
+                            <label class="choice">
+
+                                <input
+                                    type="checkbox"
+                                    name="intereses"
+                                    value="seguridad"
+                                >
+
+                                <span>
+                                    Seguridad de aplicaciones
+                                </span>
+
+                            </label>
+
+
+                            <label class="choice">
+
+                                <input
+                                    type="checkbox"
+                                    name="intereses"
+                                    value="cloud"
+                                >
+
+                                <span>
+                                    Cloud Security
+                                </span>
+
+                            </label>
+
+
+                            <label class="choice">
+
+                                <input
+                                    type="checkbox"
+                                    name="intereses"
+                                    value="ai-security"
+                                >
+
+                                <span>
+                                    AI Security
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </fieldset>
+
+
+                    <!-- Campo para explicar la necesidad -->
+
+                    <div class="form-field">
+
+                        <label for="mensaje">
+
+                            Describa su necesidad
+
+                            <span
+                                class="required-mark"
+                                aria-hidden="true"
+                            >
+                                *
+                            </span>
+
+                        </label>
+
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            rows="7"
+                            maxlength="1200"
+                            placeholder="Cuéntenos brevemente qué necesita..."
+                            aria-describedby="mensaje-help"
+                            required
+                        ></textarea>
+
+                        <small
+                            id="mensaje-help"
+                            class="field-help"
+                        >
+                            Máximo 1200 caracteres.
+                        </small>
+
+                    </div>
+
+
+                    <!-- Archivo adjunto -->
+
+                    <div class="form-field">
+
+                        <label for="archivo">
+                            Documento de soporte
+                        </label>
+
+                        <input
+                            class="file-input"
+                            type="file"
+                            id="archivo"
+                            name="archivo"
+                            accept=".pdf,.doc,.docx,.xlsx"
+                            aria-describedby="archivo-help"
+                        >
+
+                        <small
+                            id="archivo-help"
+                            class="field-help"
+                        >
+                            Formatos sugeridos: PDF, Word o Excel.
+                        </small>
+
+                    </div>
+
+
+                    <!-- Aceptación de términos -->
+
+                    <label class="choice terms-choice">
+
+                        <input
+                            type="checkbox"
+                            name="terminos"
+                            required
+                        >
+
+                        <span>
+                            Acepto el tratamiento de la información
+                            suministrada.
+                        </span>
+
+                    </label>
+
+
+                    <!-- Botones -->
+
+                    <div class="form-actions">
+
+                        <button
+                            type="submit"
+                            class="button button-primary"
+                        >
+                            Enviar solicitud
+                        </button>
+
+                        <button
+                            type="reset"
+                            class="button button-secondary"
+                        >
+                            Limpiar
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,618 @@
+/*
+    Taller 2 - Parte 1
+    Camilo Bravo
+    Código: 223034102
+*/
+
+
+/* Variables principales */
+
+:root {
+
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --primary-soft: #eff6ff;
+
+    --navy: #102a43;
+    --text: #243b53;
+    --muted: #627d98;
+
+    --border: #d9e2ec;
+    --border-strong: #bcccdc;
+
+    --background: #ffffff;
+    --background-soft: #f4f7fb;
+
+    --danger: #c62828;
+    --success: #2e7d32;
+
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 22px;
+
+    --shadow: 0 22px 60px rgba(16, 42, 67, 0.12);
+
+    --container: 980px;
+}
+
+
+/* Ajuste general */
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background: var(--background-soft);
+    color: var(--text);
+}
+
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+
+/* Contenedor principal */
+
+.form-page {
+    min-height: 100vh;
+}
+
+
+.form-section {
+    padding: 56px 20px;
+}
+
+
+/* Tarjeta donde está el formulario */
+
+.form-container {
+
+    width: min(100%, var(--container));
+
+    margin-inline: auto;
+
+    padding: 42px;
+
+    background: var(--background);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow);
+}
+
+
+/* Encabezado */
+
+.form-header {
+
+    max-width: 720px;
+
+    margin-bottom: 36px;
+}
+
+
+.eyebrow {
+
+    display: inline-block;
+
+    color: var(--primary);
+
+    font-size: 0.76rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.14em;
+}
+
+
+.form-header h1 {
+
+    margin: 11px 0 0;
+
+    color: var(--navy);
+
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+
+    line-height: 1.05;
+
+    letter-spacing: -0.03em;
+}
+
+
+.form-header p {
+
+    margin: 18px 0 0;
+
+    color: var(--muted);
+
+    line-height: 1.7;
+}
+
+
+.form-header strong,
+.required-mark {
+    color: var(--danger);
+}
+
+
+/* Organización de todo el formulario */
+
+.contact-form {
+
+    display: grid;
+
+    gap: 26px;
+}
+
+
+/* Secciones del formulario */
+
+.form-block {
+
+    display: grid;
+
+    gap: 20px;
+
+    padding-bottom: 4px;
+}
+
+
+.form-block h2 {
+
+    margin: 0;
+
+    color: var(--navy);
+
+    font-size: 1.08rem;
+}
+
+
+/* Dos columnas */
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* Cada campo */
+
+.form-field {
+
+    display: grid;
+
+    gap: 8px;
+}
+
+
+.form-field label,
+fieldset legend {
+
+    color: var(--navy);
+
+    font-size: 0.92rem;
+
+    font-weight: 700;
+}
+
+
+/* Campos de entrada */
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+
+    width: 100%;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-sm);
+
+    background: #ffffff;
+
+    color: var(--text);
+
+    padding: 12px 13px;
+
+    outline: none;
+
+    transition:
+        border-color 160ms ease,
+        box-shadow 160ms ease,
+        background-color 160ms ease;
+}
+
+
+/* Placeholder */
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: #9aa9b8;
+}
+
+
+/* Área de texto */
+
+.form-field textarea {
+
+    min-height: 160px;
+
+    resize: vertical;
+
+    line-height: 1.55;
+}
+
+
+/* Cuando el usuario entra en un campo */
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 4px
+        rgba(37, 99, 235, 0.11);
+}
+
+
+/* Foco cuando se navega con el teclado */
+
+.form-field input:focus-visible,
+.form-field select:focus-visible,
+.form-field textarea:focus-visible,
+.button:focus-visible,
+.choice input:focus-visible {
+
+    outline:
+        3px solid
+        rgba(37, 99, 235, 0.25);
+
+    outline-offset: 2px;
+}
+
+
+/* Mostrar estados de validación */
+
+.form-field input:not(:placeholder-shown):valid,
+.form-field textarea:not(:placeholder-shown):valid {
+
+    border-color: var(--success);
+}
+
+
+.form-field input:not(:placeholder-shown):invalid,
+.form-field textarea:not(:placeholder-shown):invalid {
+
+    border-color: var(--danger);
+}
+
+
+/* Select */
+
+.form-field select {
+
+    appearance: none;
+
+    padding-right: 42px;
+
+    background-image:
+
+        linear-gradient(
+            45deg,
+            transparent 50%,
+            var(--muted) 50%
+        ),
+
+        linear-gradient(
+            135deg,
+            var(--muted) 50%,
+            transparent 50%
+        );
+
+    background-position:
+        calc(100% - 18px) 50%,
+        calc(100% - 13px) 50%;
+
+    background-size:
+        5px 5px,
+        5px 5px;
+
+    background-repeat: no-repeat;
+}
+
+
+/* Grupos de opciones */
+
+fieldset {
+
+    margin: 0;
+
+    min-inline-size: 0;
+
+    padding: 20px 22px;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-md);
+}
+
+
+fieldset legend {
+    padding: 0 8px;
+}
+
+
+/* Radio y checkbox */
+
+.choice-list {
+
+    display: grid;
+
+    gap: 11px;
+
+    margin-top: 6px;
+}
+
+
+.choice {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    color: var(--text);
+
+    line-height: 1.5;
+
+    cursor: pointer;
+}
+
+
+.choice input {
+
+    flex: 0 0 auto;
+
+    margin: 3px 0 0;
+
+    accent-color: var(--primary);
+}
+
+
+/* Texto pequeño debajo de algunos campos */
+
+.field-help {
+
+    color: var(--muted);
+
+    font-size: 0.8rem;
+
+    line-height: 1.5;
+}
+
+
+/* Campo para archivos */
+
+.file-input {
+
+    padding: 9px 10px !important;
+
+    border-style: dashed !important;
+
+    background: var(--background-soft) !important;
+}
+
+
+.file-input:hover {
+
+    border-color: var(--border-strong);
+}
+
+
+/* Botones */
+
+.form-actions {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    padding-top: 2px;
+}
+
+
+.button {
+
+    min-height: 44px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0 20px;
+
+    border-radius: var(--radius-sm);
+
+    border: 1px solid transparent;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 160ms ease,
+        background-color 160ms ease,
+        border-color 160ms ease,
+        box-shadow 160ms ease;
+}
+
+
+/* Botón enviar */
+
+.button-primary {
+
+    border-color: var(--primary);
+
+    background: var(--primary);
+
+    color: #ffffff;
+}
+
+
+.button-primary:hover {
+
+    background: var(--primary-hover);
+
+    border-color: var(--primary-hover);
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 18px
+        rgba(37, 99, 235, 0.18);
+}
+
+
+/* Botón limpiar */
+
+.button-secondary {
+
+    border-color: var(--border);
+
+    background: #ffffff;
+
+    color: var(--navy);
+}
+
+
+.button-secondary:hover {
+
+    border-color: var(--border-strong);
+
+    background: var(--background-soft);
+}
+
+
+/* Campos deshabilitados */
+
+.form-field input:disabled,
+.form-field select:disabled,
+.form-field textarea:disabled {
+
+    background: #f0f3f6;
+
+    color: #98a2b3;
+
+    cursor: not-allowed;
+}
+
+
+/* Campos de solo lectura */
+
+.form-field input[readonly],
+.form-field select[readonly],
+.form-field textarea[readonly] {
+
+    background: #f8fafc;
+}
+
+
+/* Adaptación para celular */
+
+@media (max-width: 720px) {
+
+    .form-section {
+        padding: 28px 12px;
+    }
+
+
+    .form-container {
+
+        padding: 28px 20px;
+
+        border-radius: var(--radius-md);
+    }
+
+
+    .form-header {
+        margin-bottom: 28px;
+    }
+
+
+    /* Una sola columna en pantallas pequeñas */
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Botones uno debajo del otro */
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+
+    .button {
+        width: 100%;
+    }
+
+}
+
+
+/* Ajuste para celulares pequeños */
+
+@media (max-width: 420px) {
+
+    .form-container {
+        padding-inline: 16px;
+    }
+
+
+    fieldset {
+        padding-inline: 16px;
+    }
+
+
+    .form-header h1 {
+        font-size: 2rem;
+    }
+
+}
