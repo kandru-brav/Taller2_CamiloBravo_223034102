@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Opinión</title>
+    <link rel="stylesheet" href="encuesta.css">
+</head>
+
+<body>
+
+    <main>
+        <section class="form-container">
+
+            <header class="form-header">
+                <span class="eyebrow">EJERCICIO 3</span>
+                <h1>Encuesta de opinión</h1>
+                <p>Ayúdanos a conocer tu experiencia.</p>
+            </header>
+
+            <form action="#" method="post">
+
+                <fieldset>
+
+                    <legend>¿Cómo calificas nuestra experiencia?</legend>
+
+                    <div class="choice-list">
+
+                        <label class="choice">
+                            <input
+                                type="radio"
+                                name="calificacion"
+                                value="excelente"
+                                required
+                            >
+                            <span>Excelente</span>
+                        </label>
+
+                        <label class="choice">
+                            <input
+                                type="radio"
+                                name="calificacion"
+                                value="buena"
+                            >
+                            <span>Buena</span>
+                        </label>
+
+                        <label class="choice">
+                            <input
+                                type="radio"
+                                name="calificacion"
+                                value="regular"
+                            >
+                            <span>Regular</span>
+                        </label>
+
+                        <label class="choice">
+                            <input
+                                type="radio"
+                                name="calificacion"
+                                value="mala"
+                            >
+                            <span>Mala</span>
+                        </label>
+
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>¿Qué aspectos te gustaron?</legend>
+
+                    <div class="choice-list">
+
+                        <label class="choice">
+                            <input
+                                type="checkbox"
+                                name="aspectos"
+                                value="atencion"
+                            >
+                            <span>Atención</span>
+                        </label>
+
+                        <label class="choice">
+                            <input
+                                type="checkbox"
+                                name="aspectos"
+                                value="rapidez"
+                            >
+                            <span>Rapidez</span>
+                        </label>
+
+                        <label class="choice">
+                            <input
+                                type="checkbox"
+                                name="aspectos"
+                                value="calidad"
+                            >
+                            <span>Calidad</span>
+                        </label>
+
+                        <label class="choice">
+                            <input
+                                type="checkbox"
+                                name="aspectos"
+                                value="precio"
+                            >
+                            <span>Precio</span>
+                        </label>
+
+                    </div>
+
+                </fieldset>
+
+                <div class="form-field">
+
+                    <label for="satisfaccion">
+                        Nivel de satisfacción
+                    </label>
+
+                    <input
+                        type="range"
+                        id="satisfaccion"
+                        name="satisfaccion"
+                        min="0"
+                        max="10"
+                        value="5"
+                    >
+
+                    <small class="field-help">
+                        Selecciona un valor entre 0 y 10.
+                    </small>
+
+                </div>
+
+                <div class="form-actions">
+
+                    <button type="submit" class="button-primary">
+                        Enviar encuesta
+                    </button>
+
+                    <button type="reset" class="button-secondary">
+                        Limpiar
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+    </main>
+
+</body>
+</html>

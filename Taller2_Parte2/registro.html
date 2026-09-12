@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="registro.css">
+</head>
+
+<body>
+
+    <main>
+        <section class="form-container">
+
+            <header class="form-header">
+                <span class="eyebrow">EJERCICIO 1</span>
+                <h1>Crear una cuenta</h1>
+                <p>Completa tus datos para registrarte.</p>
+            </header>
+
+            <form action="#" method="post">
+
+                <div class="form-grid">
+
+                    <div class="form-field">
+                        <label for="nombre">Nombre completo</label>
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            required
+                            autocomplete="name"
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="correo">Correo electrónico</label>
+                        <input
+                            type="email"
+                            id="correo"
+                            name="correo"
+                            required
+                            autocomplete="email"
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="password">Contraseña</label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            minlength="8"
+                            required
+                            autocomplete="new-password"
+                            aria-describedby="password-help"
+                        >
+                        <small id="password-help" class="field-help">
+                            Mínimo 8 caracteres.
+                        </small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="confirm-password">Confirmar contraseña</label>
+                        <input
+                            type="password"
+                            id="confirm-password"
+                            name="confirm-password"
+                            minlength="8"
+                            required
+                            autocomplete="new-password"
+                        >
+                    </div>
+
+                    <div class="form-field full">
+                        <label class="choice">
+                            <input
+                                type="checkbox"
+                                id="terminos"
+                                name="terminos"
+                                required
+                            >
+                            <span>Acepto los términos y condiciones.</span>
+                        </label>
+                    </div>
+
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="button-primary">
+                        Registrarme
+                    </button>
+
+                    <button type="reset" class="button-secondary">
+                        Limpiar
+                    </button>
+                </div>
+
+            </form>
+
+        </section>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Soporte</title>
+    <link rel="stylesheet" href="soporte.css">
+</head>
+
+<body>
+
+    <main>
+        <section class="form-container">
+
+            <header class="form-header">
+                <span class="eyebrow">EJERCICIO 5</span>
+                <h1>Solicitud de soporte</h1>
+                <p>Cuéntanos el problema y te ayudaremos.</p>
+            </header>
+
+            <form
+                action="#"
+                method="post"
+                enctype="multipart/form-data"
+            >
+
+                <div class="form-grid">
+
+                    <div class="form-field">
+
+                        <label for="nombre">
+                            Nombre completo
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            required
+                            autocomplete="name"
+                        >
+
+                    </div>
+
+                    <div class="form-field">
+
+                        <label for="correo">
+                            Correo electrónico
+                        </label>
+
+                        <input
+                            type="email"
+                            id="correo"
+                            name="correo"
+                            required
+                            autocomplete="email"
+                        >
+
+                    </div>
+
+                    <div class="form-field">
+
+                        <label for="prioridad">
+                            Prioridad
+                        </label>
+
+                        <select
+                            id="prioridad"
+                            name="prioridad"
+                            required
+                        >
+
+                            <option value="">
+                                Selecciona una prioridad
+                            </option>
+
+                            <option value="baja">
+                                Baja
+                            </option>
+
+                            <option value="media">
+                                Media
+                            </option>
+
+                            <option value="alta">
+                                Alta
+                            </option>
+
+                            <option value="critica">
+                                Crítica
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-field">
+
+                        <label for="categoria">
+                            Categoría
+                        </label>
+
+                        <select
+                            id="categoria"
+                            name="categoria"
+                            required
+                        >
+
+                            <option value="">
+                                Selecciona una categoría
+                            </option>
+
+                            <option value="cuenta">
+                                Cuenta
+                            </option>
+
+                            <option value="software">
+                                Software
+                            </option>
+
+                            <option value="hardware">
+                                Hardware
+                            </option>
+
+                            <option value="otro">
+                                Otro
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-field full">
+
+                        <label for="problema">
+                            Describe el problema
+                        </label>
+
+                        <textarea
+                            id="problema"
+                            name="problema"
+                            maxlength="1200"
+                            required
+                            placeholder="Explica qué ocurrió..."
+                        ></textarea>
+
+                        <small class="field-help">
+                            Máximo 1200 caracteres.
+                        </small>
+
+                    </div>
+
+                    <div class="form-field full">
+
+                        <label for="archivo">
+                            Archivo de soporte
+                        </label>
+
+                        <input
+                            type="file"
+                            id="archivo"
+                            name="archivo"
+                            accept=".jpg,.jpeg,.png,.pdf,.txt,.log"
+                            aria-describedby="archivo-help"
+                        >
+
+                        <small
+                            id="archivo-help"
+                            class="field-help"
+                        >
+                            Puedes adjuntar una imagen,
+                            PDF, TXT o archivo LOG.
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <div class="form-actions">
+
+                    <button type="submit" class="button-primary">
+                        Enviar solicitud
+                    </button>
+
+                    <button type="reset" class="button-secondary">
+                        Limpiar
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Reserva</title>
+    <link rel="stylesheet" href="reserva.css">
+</head>
+
+<body>
+
+    <main>
+        <section class="form-container">
+
+            <header class="form-header">
+                <span class="eyebrow">EJERCICIO 2</span>
+                <h1>Realizar una reserva</h1>
+                <p>Selecciona la fecha, hora y cantidad de personas.</p>
+            </header>
+
+            <form action="#" method="post">
+
+                <div class="form-grid">
+
+                    <div class="form-field">
+                        <label for="fecha">Fecha</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="hora">Hora</label>
+                        <input type="time" id="hora" name="hora" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="personas">Número de personas</label>
+                        <input
+                            type="number"
+                            id="personas"
+                            name="personas"
+                            min="1"
+                            max="20"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="nombre">Nombre de la reserva</label>
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-field full">
+                        <label for="comentarios">Comentarios</label>
+                        <textarea
+                            id="comentarios"
+                            name="comentarios"
+                            maxlength="500"
+                            placeholder="Escribe alguna observación especial..."
+                        ></textarea>
+
+                        <small class="field-help">
+                            Máximo 500 caracteres.
+                        </small>
+                    </div>
+
+                </div>
+
+                <div class="form-actions">
+
+                    <button type="submit" class="button-primary">
+                        Reservar
+                    </button>
+
+                    <button type="reset" class="button-secondary">
+                        Limpiar
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+    </main>
+
+</body>
+</html>
